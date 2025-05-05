@@ -1,16 +1,11 @@
-FROM node:23-slim
+FROM python:3.11-slim
 
-WORKDIR /usr/src/app
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-COPY package.json ./
-RUN npm install
+COPY led_sales_tracker ./led_sales_tracker
+COPY .env.example ./
+ENV PYTHONUNBUFFERED=1
 
-COPY src ./src
-COPY .env.example ./ 
-COPY systemd ./systemd
-COPY scripts ./scripts
-
-EXPOSE 80
-
-CMD ["npm", "start"]
-
+CMD ["python", "-m", "led_sales_tracker.main"]

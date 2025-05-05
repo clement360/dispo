@@ -1,0 +1,14 @@
+# Core runtime
+Flask==2.3.2
+python-dotenv==1.0.0
+
+# Amazon SP-API (choose one; placeholder)
+# sp-api==0.9.*
+
+# Matrix
+# Only installed on the Pi.  Keep optional.
+# rpi-rgb-led-matrix==0.2.0
+
+# Emulator (dev machines only)
+pygame==2.5.2
+numpy>=1.25

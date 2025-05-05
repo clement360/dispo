@@ -1,0 +1,13 @@
+[Unit]
+Description=LED Sales Tracker
+After=network.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/led-sales-tracker
+ExecStart=/usr/bin/python3 -m led_sales_tracker.main
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
