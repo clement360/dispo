@@ -12,3 +12,4 @@ python-dotenv==1.0.0
 # Emulator (dev machines only)
 pygame==2.5.2
 numpy>=1.25
+python-amazon-sp-api==1.9.28

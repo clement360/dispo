@@ -14,7 +14,7 @@ AMAZON_CLIENT_SECRET = os.getenv("AMAZON_CLIENT_SECRET", "")
 AMAZON_REFRESH_TOKEN = os.getenv("AMAZON_REFRESH_TOKEN", "")
 
 # Refresh rate for sales polling (seconds)
-REFRESH_INTERVAL = int(os.getenv("REFRESH_INTERVAL", 300))
+REFRESH_INTERVAL = int(os.getenv("REFRESH_INTERVAL", 10))
 
 # Display back-end selection.
 # auto  – detect platform

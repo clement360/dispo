@@ -18,7 +18,6 @@ class EmulatedMatrixDisplay(BaseDisplay):
         pass
 
     def push(self):
-        import pygame
         # Pump events so window stays responsive
         for e in pygame.event.get():
             if e.type == pygame.QUIT:
